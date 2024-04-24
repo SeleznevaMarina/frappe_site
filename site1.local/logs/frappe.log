@@ -1,0 +1,6 @@
+2024-04-24 16:06:12,764 ERROR frappe New Exception collected with id: 2024-04-24 16:06:12.665986-127.0.0.1-fc1
+Site: site1.local
+Form Dict: {'data': '{"показатель_1":"1","показатель_2":"1, 2","doctype":"Ratings","web_form_name":"ratings"}', 'web_form': 'ratings', 'for_payment': 'false', 'cmd': 'frappe.website.doctype.web_form.web_form.accept'}
+2024-04-24 16:06:14,863 ERROR frappe New Exception collected with id: 2024-04-24 16:06:14.858903-127.0.0.1-92d
+Site: site1.local
+Form Dict: {'data': '{"показатель_1":"1","показатель_2":"1, 2","doctype":"Ratings","web_form_name":"ratings"}', 'web_form': 'ratings', 'for_payment': 'false', 'cmd': 'frappe.website.doctype.web_form.web_form.accept'}

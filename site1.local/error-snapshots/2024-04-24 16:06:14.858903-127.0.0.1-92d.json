@@ -1,0 +1,486 @@
+{
+ "etype": "DataError",
+ "evalue": "DataError(1265, \"Data truncated for column '\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2' at row 1\")",
+ "exception": {
+  "args": [
+   40,
+   49,
+   50,
+   54,
+   53,
+   44,
+   32,
+   34,
+   68,
+   97,
+   116,
+   97,
+   32,
+   116,
+   114,
+   117,
+   110,
+   99,
+   97,
+   116,
+   101,
+   100,
+   32,
+   102,
+   111,
+   114,
+   32,
+   99,
+   111,
+   108,
+   117,
+   109,
+   110,
+   32,
+   39,
+   208,
+   191,
+   208,
+   190,
+   208,
+   186,
+   208,
+   176,
+   208,
+   183,
+   208,
+   176,
+   209,
+   130,
+   208,
+   181,
+   208,
+   187,
+   209,
+   140,
+   95,
+   50,
+   39,
+   32,
+   97,
+   116,
+   32,
+   114,
+   111,
+   119,
+   32,
+   49,
+   34,
+   41
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   68,
+   97,
+   116,
+   97,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://0.0.0.0:8000/' [POST]>)",
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/marina/proj...ject/frappe-bench/apps/frappe/frappe/handler.py'>",
+    "frappe.handler. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/marina/projects/fra...ect/frappe-bench/apps/frappe/frappe/__init__.py'>",
+    "response": "None"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "61": "",
+    "62": "\t\telif frappe.form_dict.cmd:",
+    "63": "\t\t\tresponse = frappe.handler.handle()",
+    "64": "",
+    "65": "\t\telif request.path.startswith(\"/api/\"):"
+   },
+   "lnum": 63
+  },
+  {
+   "call": "()",
+   "dump": {
+    "cmd": "'frappe.website.doctype.web_form.web_form.accept'",
+    "data": "None",
+    "global execute_cmd": "<function execute_cmd>"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/handler.py",
+   "func": "handle",
+   "lines": {
+    "36": "",
+    "37": "\tif cmd != \"login\":",
+    "38": "\t\tdata = execute_cmd(cmd)",
+    "39": "",
+    "40": "\t# data can be an empty string or list which are valid responses"
+   },
+   "lnum": 38
+  },
+  {
+   "call": "(cmd='frappe.website.doctype.web_form.web_form.accept', from_async=False)",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'data': '{\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_1\":\"1\",\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2\":\"1,...frappe.website.doctype.web_form.web_form.accept'}",
+    "global frappe": "<module 'frappe' from '/home/marina/projects/fra...ect/frappe-bench/apps/frappe/frappe/__init__.py'>",
+    "method": "<function accept>"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/handler.py",
+   "func": "execute_cmd",
+   "lines": {
+    "74": "\t\tis_valid_http_method(method)",
+    "75": "",
+    "76": "\treturn frappe.call(method, **frappe.form_dict)",
+    "77": "",
+    "78": ""
+   },
+   "lnum": 76
+  },
+  {
+   "call": "(fn=<function accept>, *args=(), **kwargs={'cmd': 'frappe.website.doctype.web_form.web_form.accept', 'data': '{\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_1\":\"1\",\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2\":\"1, 2\",\"doctype\":\"Ratings\",\"web_form_name\":\"ratings\"}', 'for_payment': 'false', 'web_form': 'ratings'})",
+   "dump": {
+    "args": "()",
+    "fn": "<function accept>",
+    "newargs": "{'cmd': 'frappe.website.doctype.web_form.web_form.accept', 'data': '{\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_1\":\"1\",\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2\":\"1, 2\",\"doctype\":\"Ratings\",\"web_form_name\":\"ratings\"}', 'for_payment': 'false', 'web_form': 'ratings'}"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1472": "\tnewargs = get_newargs(fn, kwargs)",
+    "1473": "",
+    "1474": "\treturn fn(*args, **newargs)",
+    "1475": "",
+    "1476": ""
+   },
+   "lnum": 1474
+  },
+  {
+   "call": "(*args=(), **kwargs={'cmd': 'frappe.website.doctype.web_form.web_form.accept', 'data': '{\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_1\":\"1\",\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2\":\"1, 2\",\"doctype\":\"Ratings\",\"web_form_name\":\"ratings\"}', 'for_payment': 'false', 'web_form': 'ratings'})",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'data': '{\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_1\":\"1\",\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2\":\"1,...frappe.website.doctype.web_form.web_form.accept'}",
+    "fun": "<function accept>",
+    "global frappe": "<module 'frappe' from '/home/marina/projects/fra...ect/frappe-bench/apps/frappe/frappe/__init__.py'>",
+    "kwargs": "{'cmd': 'frappe.website.doctype.web_form.web_form.accept', 'data': '{\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_1\":\"1\",\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2\":\"1, 2\",\"doctype\":\"Ratings\",\"web_form_name\":\"ratings\"}', 'for_payment': 'false', 'web_form': 'ratings'}"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/rate_limiter.py",
+   "func": "wrapper",
+   "lines": {
+    "151": "\t\t\t\t)",
+    "152": "",
+    "153": "\t\t\treturn frappe.call(fun, **frappe.form_dict or kwargs)",
+    "154": "",
+    "155": "\t\treturn wrapper"
+   },
+   "lnum": 153
+  },
+  {
+   "call": "(fn=<function accept>, *args=(), **kwargs={'cmd': 'frappe.website.doctype.web_form.web_form.accept', 'data': '{\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_1\":\"1\",\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2\":\"1, 2\",\"doctype\":\"Ratings\",\"web_form_name\":\"ratings\"}', 'for_payment': 'false', 'web_form': 'ratings'})",
+   "dump": {
+    "args": "()",
+    "fn": "<function accept>",
+    "newargs": "{'data': '{\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_1\":\"1\",\"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2\":\"1, 2\",\"doctype\":\"Ratings\",\"web_form_name\":\"ratings\"}', 'for_payment': 'false', 'web_form': 'ratings'}"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1472": "\tnewargs = get_newargs(fn, kwargs)",
+    "1473": "",
+    "1474": "\treturn fn(*args, **newargs)",
+    "1475": "",
+    "1476": ""
+   },
+   "lnum": 1474
+  },
+  {
+   "call": "(web_form=<WebForm: ratings>, data={'\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_1': '1', '\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2': '1, 2', 'doctype': 'Ratings', 'web_form_name': 'ratings'}, for_payment=False)",
+   "dump": {
+    "doc": "<Document: ef9cccccc7>",
+    "doc. insert": "<bound method Document.insert of <Document: ef9cccccc7>>",
+    "ignore_mandatory": "False",
+    "ignore_permissions": "undefined"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/website/doctype/web_form/web_form.py",
+   "func": "accept",
+   "lines": {
+    "474": "\t\tignore_mandatory = True if files else False",
+    "475": "",
+    "476": "\t\tdoc.insert(ignore_permissions=True, ignore_mandatory=ignore_mandatory)",
+    "477": "",
+    "478": "\t# add files"
+   },
+   "lnum": 476
+  },
+  {
+   "call": "(self=<Document: ef9cccccc7>, ignore_permissions=True, ignore_links=None, ignore_if_duplicate=False, ignore_mandatory=False, set_name=None, set_child_names=True)",
+   "dump": {
+    "self": "<Document: ef9cccccc7>",
+    "self. db_insert": "<bound method BaseDocument.db_insert of <Document: ef9cccccc7>>"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/model/document.py",
+   "func": "insert",
+   "lines": {
+    "273": "\t\telse:",
+    "274": "\t\t\ttry:",
+    "275": "\t\t\t\tself.db_insert()",
+    "276": "\t\t\texcept frappe.DuplicateEntryError as e:",
+    "277": "\t\t\t\tif not ignore_if_duplicate:"
+   },
+   "lnum": 275
+  },
+  {
+   "call": "(self=<Document: ef9cccccc7>)",
+   "dump": {
+    "\"\"\"INSERT INTO `tab{doctype}` ({columns})\n\t\t\t\t\tVALUES ({values})\"\"\".format": "undefined",
+    "\", \".join": "undefined",
+    "builtin len": "<built-in function len>",
+    "builtin list": "<class 'list'>",
+    "c": "undefined",
+    "columns": "['name', 'owner', 'creation', 'modified', 'modified_by', 'parent', 'parentfield', 'parenttype', 'idx', 'docstatus', '\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_1', '\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2']",
+    "d": "{'name': 'ef9cccccc7', 'owner': 'Administrator',...: 0, '\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_1': '1', '\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2': '1, 2'}",
+    "d. values": "<built-in method values of _dict object>",
+    "doctype": "undefined",
+    "frappe. db": "<frappe.database.mariadb.database.MariaDBDatabase object>",
+    "frappe.db. sql": "<bound method Database.sql of <frappe.database.mariadb.database.MariaDBDatabase object>>",
+    "global frappe": "<module 'frappe' from '/home/marina/projects/fra...ect/frappe-bench/apps/frappe/frappe/__init__.py'>",
+    "self": "<Document: ef9cccccc7>",
+    "self. doctype": "'Ratings'",
+    "values": "undefined"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/model/base_document.py",
+   "func": "db_insert",
+   "lines": {
+    "409": "\t\tcolumns = list(d)",
+    "410": "\t\ttry:",
+    "411": "\t\t\tfrappe.db.sql(",
+    "412": "\t\t\t\t\"\"\"INSERT INTO `tab{doctype}` ({columns})",
+    "413": "\t\t\t\t\tVALUES ({values})\"\"\".format("
+   },
+   "lnum": 411
+  },
+  {
+   "call": "(self=<frappe.database.mariadb.database.MariaDBDatabase object>, query='INSERT INTO `tabRatings` (`name`, `owner`, `crea... (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', values=['ef9cccccc7', 'Administrator', '2024-04-25 01:06:14.846968', '2024-04-25 01:06:14.846968', 'Administrator', None, None, None, 0, 0, '1', '1, 2'], as_dict=0, as_list=0, formatted=0, debug=0, ignore_ddl=0, as_utf8=0, auto_commit=0, update=None, explain=False)",
+   "dump": {
+    "query": "'INSERT INTO `tabRatings` (`name`, `owner`, `crea... (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'",
+    "self": "<frappe.database.mariadb.database.MariaDBDatabase object>",
+    "self. _cursor": "<pymysql.cursors.Cursor object>",
+    "self._cursor. execute": "<bound method Cursor.execute of <pymysql.cursors.Cursor object>>",
+    "values": "['ef9cccccc7', 'Administrator', '2024-04-25 01:06:14.846968', '2024-04-25 01:06:14.846968', 'Administrator', None, None, None, 0, 0, '1', '1, 2']"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/database/database.py",
+   "func": "sql",
+   "lines": {
+    "185": "\t\t\t\t\tvalues = (values,)",
+    "186": "",
+    "187": "\t\t\t\tself._cursor.execute(query, values)",
+    "188": "",
+    "189": "\t\t\t\tif frappe.flags.in_migrate:"
+   },
+   "lnum": 187
+  },
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, query=\"INSERT INTO `tabRatings` (`name`, `owner`, `crea...inistrator', NULL, NULL, NULL, 0, 0, '1', '1, 2')\", args=['ef9cccccc7', 'Administrator', '2024-04-25 01:06:14.846968', '2024-04-25 01:06:14.846968', 'Administrator', None, None, None, 0, 0, '1', '1, 2'])",
+   "dump": {
+    "query": "\"INSERT INTO `tabRatings` (`name`, `owner`, `crea...inistrator', NULL, NULL, NULL, 0, 0, '1', '1, 2')\"",
+    "result": "undefined",
+    "self": "<pymysql.cursors.Cursor object>",
+    "self. _query": "<bound method Cursor._query of <pymysql.cursors.Cursor object>>"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/cursors.py",
+   "func": "execute",
+   "lines": {
+    "146": "        query = self.mogrify(query, args)",
+    "147": "",
+    "148": "        result = self._query(query)",
+    "149": "        self._executed = query",
+    "150": "        return result"
+   },
+   "lnum": 148
+  },
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, q=\"INSERT INTO `tabRatings` (`name`, `owner`, `crea...inistrator', NULL, NULL, NULL, 0, 0, '1', '1, 2')\")",
+   "dump": {
+    "conn": "<pymysql.connections.Connection object>",
+    "conn. query": "<bound method Connection.query of <pymysql.connections.Connection object>>",
+    "q": "\"INSERT INTO `tabRatings` (`name`, `owner`, `crea...inistrator', NULL, NULL, NULL, 0, 0, '1', '1, 2')\""
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/cursors.py",
+   "func": "_query",
+   "lines": {
+    "308": "        self._last_executed = q",
+    "309": "        self._clear_result()",
+    "310": "        conn.query(q)",
+    "311": "        self._do_get_result()",
+    "312": "        return self.rowcount"
+   },
+   "lnum": 310
+  },
+  {
+   "call": "(self=<pymysql.connections.Connection object>, sql=b\"INSERT INTO `tabRatings` (`name`, `owner`, `cr...nistrator', NULL, NULL, NULL, 0, 0, '1', '1, 2')\", unbuffered=False)",
+   "dump": {
+    "self": "<pymysql.connections.Connection object>",
+    "self. _affected_rows": "0",
+    "self. _read_query_result": "<bound method Connection._read_query_result of <pymysql.connections.Connection object>>",
+    "unbuffered": "False"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py",
+   "func": "query",
+   "lines": {
+    "546": "            sql = sql.encode(self.encoding, \"surrogateescape\")",
+    "547": "        self._execute_command(COMMAND.COM_QUERY, sql)",
+    "548": "        self._affected_rows = self._read_query_result(unbuffered=unbuffered)",
+    "549": "        return self._affected_rows",
+    "550": ""
+   },
+   "lnum": 548
+  },
+  {
+   "call": "(self=<pymysql.connections.Connection object>, unbuffered=False)",
+   "dump": {
+    "result": "<pymysql.connections.MySQLResult object>",
+    "result. read": "<bound method MySQLResult.read of <pymysql.connections.MySQLResult object>>"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py",
+   "func": "_read_query_result",
+   "lines": {
+    "773": "        else:",
+    "774": "            result = MySQLResult(self)",
+    "775": "            result.read()",
+    "776": "        self._result = result",
+    "777": "        if result.server_status is not None:"
+   },
+   "lnum": 775
+  },
+  {
+   "call": "(self=<pymysql.connections.MySQLResult object>)",
+   "dump": {
+    "first_packet": "undefined",
+    "self": "<pymysql.connections.MySQLResult object>",
+    "self. connection": "None",
+    "self.connection._read_packet": "undefined"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py",
+   "func": "read",
+   "lines": {
+    "1154": "    def read(self):",
+    "1155": "        try:",
+    "1156": "            first_packet = self.connection._read_packet()",
+    "1157": "",
+    "1158": "            if first_packet.is_ok_packet():"
+   },
+   "lnum": 1156
+  },
+  {
+   "call": "(self=<pymysql.connections.Connection object>, packet_type=<class 'pymysql.protocol.MysqlPacket'>)",
+   "dump": {
+    "packet": "<pymysql.protocol.MysqlPacket object>",
+    "packet. raise_for_error": "<bound method MysqlPacket.raise_for_error of <pymysql.protocol.MysqlPacket object>>"
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py",
+   "func": "_read_packet",
+   "lines": {
+    "723": "            if self._result is not None and self._result.unbuffered_active is True:",
+    "724": "                self._result.unbuffered_active = False",
+    "725": "            packet.raise_for_error()",
+    "726": "        return packet",
+    "727": ""
+   },
+   "lnum": 725
+  },
+  {
+   "call": "(self=<pymysql.protocol.MysqlPacket object>)",
+   "dump": {
+    "err. raise_mysql_exception": "<function raise_mysql_exception>",
+    "global err": "<module 'pymysql.err' from '/home/marina/project...env/lib/python3.10/site-packages/pymysql/err.py'>",
+    "self": "<pymysql.protocol.MysqlPacket object>",
+    "self. _data": "b\"\\xff\\xf1\\x04#01000Data truncated for column '\\...\\xb0\\xd1\\x82\\xd0\\xb5\\xd0\\xbb\\xd1\\x8c_2' at row 1\""
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py",
+   "func": "raise_for_error",
+   "lines": {
+    "219": "        if DEBUG:",
+    "220": "            print(\"errno =\", errno)",
+    "221": "        err.raise_mysql_exception(self._data)",
+    "222": "",
+    "223": "    def dump(self):"
+   },
+   "lnum": 221
+  },
+  {
+   "call": "(data=b\"\\xff\\xf1\\x04#01000Data truncated for column '\\...\\xb0\\xd1\\x82\\xd0\\xb5\\xd0\\xbb\\xd1\\x8c_2' at row 1\")",
+   "dump": {
+    "errno": "1265",
+    "errorclass": "<class 'pymysql.err.DataError'>",
+    "errval": "\"Data truncated for column '\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2' at row 1\""
+   },
+   "file": "/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py",
+   "func": "raise_mysql_exception",
+   "lines": {
+    "139": "    errval = data[9:].decode(\"utf-8\", \"replace\")",
+    "140": "    errorclass = error_map.get(errno)",
+    "141": "    if errorclass is None:",
+    "142": "        errorclass = InternalError if errno < 1000 else OperationalError",
+    "143": "    raise errorclass(errno, errval)"
+   },
+   "lnum": 143
+  }
+ ],
+ "locals": {
+  "data": "b\"\\xff\\xf1\\x04#01000Data truncated for column '\\...\\xb0\\xd1\\x82\\xd0\\xb5\\xd0\\xbb\\xd1\\x8c_2' at row 1\"",
+  "errno": "1265",
+  "errorclass": "<class 'pymysql.err.DataError'>",
+  "errval": "Data truncated for column '\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2' at row 1"
+ },
+ "pyver": "Python 3.10.12: /home/marina/projects/frappe_project/frappe-bench/env/bin/python (prefix: /home/marina/projects/frappe_project/frappe-bench/env)",
+ "timestamp": "2024-04-24 16:06:14.858992",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/app.py\", line 63, in application\n    response = frappe.handler.handle()\n  File \"/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/handler.py\", line 38, in handle\n    data = execute_cmd(cmd)\n  File \"/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/handler.py\", line 76, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/__init__.py\", line 1474, in call\n    return fn(*args, **newargs)\n  File \"/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/rate_limiter.py\", line 153, in wrapper\n    return frappe.call(fun, **frappe.form_dict or kwargs)\n  File \"/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/__init__.py\", line 1474, in call\n    return fn(*args, **newargs)\n  File \"/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/website/doctype/web_form/web_form.py\", line 476, in accept\n    doc.insert(ignore_permissions=True, ignore_mandatory=ignore_mandatory)\n  File \"/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/model/document.py\", line 275, in insert\n    self.db_insert()\n  File \"/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/model/base_document.py\", line 411, in db_insert\n    frappe.db.sql(\n  File \"/home/marina/projects/frappe_project/frappe-bench/apps/frappe/frappe/database/database.py\", line 187, in sql\n    self._cursor.execute(query, values)\n  File \"/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/cursors.py\", line 148, in execute\n    result = self._query(query)\n  File \"/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/cursors.py\", line 310, in _query\n    conn.query(q)\n  File \"/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py\", line 548, in query\n    self._affected_rows = self._read_query_result(unbuffered=unbuffered)\n  File \"/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py\", line 775, in _read_query_result\n    result.read()\n  File \"/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py\", line 1156, in read\n    first_packet = self.connection._read_packet()\n  File \"/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py\", line 725, in _read_packet\n    packet.raise_for_error()\n  File \"/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py\", line 221, in raise_for_error\n    err.raise_mysql_exception(self._data)\n  File \"/home/marina/projects/frappe_project/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py\", line 143, in raise_mysql_exception\n    raise errorclass(errno, errval)\npymysql.err.DataError: (1265, \"Data truncated for column '\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c_2' at row 1\")\n"
+}
